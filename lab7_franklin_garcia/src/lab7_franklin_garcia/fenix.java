@@ -9,6 +9,6 @@ package lab7_franklin_garcia;
  *
  * @author Franklin Garcia
  */
-public class bestia {
+public class fenix {
     
 }
