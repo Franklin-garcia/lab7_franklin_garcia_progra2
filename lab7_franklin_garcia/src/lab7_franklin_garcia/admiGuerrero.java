@@ -11,13 +11,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Franklin Garcia
  */
-public class admiGuerrero {
+public class admiGuerrero implements Serializable {
+
+    private static final long SerialVersionUID = 222L;
 
     private ArrayList<guerreros> lista_guerreros = new ArrayList();
     private File archivo = null;
@@ -45,6 +48,7 @@ public class admiGuerrero {
     public void setGuerrero(guerreros a) {
         lista_guerreros.add(a);
     }
+
     //
     public void cargarArchivo() {
         try {
@@ -87,5 +91,5 @@ public class admiGuerrero {
             }
         }
     }
-    
+
 }

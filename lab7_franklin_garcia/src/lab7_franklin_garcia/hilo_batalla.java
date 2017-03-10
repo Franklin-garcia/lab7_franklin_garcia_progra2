@@ -5,6 +5,8 @@
  */
 package lab7_franklin_garcia;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Franklin Garcia
@@ -18,7 +20,10 @@ public class hilo_batalla implements Runnable {
         this.id = id;
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
+        
     }
+
+   
 
     @Override
     public void run() {
