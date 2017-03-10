@@ -11,16 +11,16 @@ import java.io.Serializable;
  *
  * @author Franklin Garcia
  */
-public class guerreros implements Serializable{
+public abstract class guerreros implements Serializable , comportamiento{
     
     private static final long SerialVersionUID = 777L;
     //un nombre, un nickname, un poder de ataque, un poder de defensa, salud y puntos.  
     protected String nombre;
-    private String nickname;
-    private int poder_ataque;
-    private int porder_defensa;
-    private int salud;
-    private int puntos;
+    protected String nickname;
+    protected int poder_ataque;
+    protected int porder_defensa;
+    protected int salud;
+    protected int puntos;
 
     public guerreros() {
     }
@@ -87,6 +87,7 @@ public class guerreros implements Serializable{
         return nombre;
     }
     
-    
+    @Override
+    public abstract void ataque();
     
 }

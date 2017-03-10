@@ -6,38 +6,38 @@
 package lab7_franklin_garcia;
 
 import java.util.ArrayList;
-import javax.swing.Icon;
 
 /**
  *
  * @author Franklin Garcia
  */
-public class fenix extends guerreros {
+public class alumnos extends guerreros{
     
-    private ArrayList<guerreros> fenix = new ArrayList();   
+    private ArrayList<guerreros>alumnos=new ArrayList();
 
-    public fenix() {
+    public alumnos() {
         super();
     }
 
-    public fenix(String nombre, String nickname, int poder_ataque, int porder_defensa, int salud, int puntos) {
+    public alumnos(String nombre, String nickname, int poder_ataque, int porder_defensa, int salud, int puntos) {
         super(nombre, nickname, poder_ataque, porder_defensa, salud, puntos);
     }
 
-    public ArrayList<guerreros> getFenix() {
-        return fenix;
+    public ArrayList<guerreros> getAlumnos() {
+        return alumnos;
     }
 
-    public void setGuerreros(ArrayList<guerreros> fenix) {
-        this.fenix = fenix;
+    public void setAlumnos(ArrayList<guerreros> alumnos) {
+        this.alumnos = alumnos;
     }
-    
 
     @Override
     public String toString() {
         return nombre;
     }
-    public void ataque(){
-        
-    }
+    
+    
+   public void ataque(){
+      
+   } 
 }
