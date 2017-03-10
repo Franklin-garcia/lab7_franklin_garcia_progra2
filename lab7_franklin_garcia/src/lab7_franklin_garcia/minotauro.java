@@ -18,6 +18,10 @@ public class minotauro extends guerreros {
         super();
     }
 
+    public minotauro(String nombre, String nickname, int poder_ataque, int porder_defensa, int salud, int puntos) {
+        super(nombre, nickname, poder_ataque, porder_defensa, salud, puntos);
+    }
+
     public ArrayList<guerreros> getMinotauro() {
         return minotauro;
     }

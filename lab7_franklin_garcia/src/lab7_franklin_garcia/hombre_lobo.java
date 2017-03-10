@@ -18,6 +18,10 @@ public class hombre_lobo extends guerreros{
         super();
     }
 
+    public hombre_lobo(String nombre, String nickname, int poder_ataque, int porder_defensa, int salud, int puntos) {
+        super(nombre, nickname, poder_ataque, porder_defensa, salud, puntos);
+    }
+
     public ArrayList<guerreros> getHombre_lobo() {
         return hombre_lobo;
     }
