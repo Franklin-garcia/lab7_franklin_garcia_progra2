@@ -15,8 +15,8 @@ public class hilo_batalla implements Runnable {
     private String id;
     private guerreros jugador1;
     private guerreros jugador2;
-
-    public hilo_batalla(String id, guerreros jugador1, guerreros jugador2) {
+    private boolean vive;
+    public hilo_batalla(ArrayList<hilo_batalla>pelea,String id, guerreros jugador1, guerreros jugador2) {
         this.id = id;
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;

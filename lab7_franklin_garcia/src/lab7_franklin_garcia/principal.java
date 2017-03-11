@@ -520,16 +520,16 @@ public class principal extends javax.swing.JFrame {
 
     private void boton_modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_modificarMouseClicked
         if (jTable1.getSelectedRow() >= 0) {
+            String nombre,nickName,ataque,defensa,salud;
+             nombre = JOptionPane.showInputDialog("Ingrese nombre");
+             nickName = JOptionPane.showInputDialog("Ingrese nickName");
+             ataque = JOptionPane.showInputDialog("Ingrese nuevo poder de ataque");
+            defensa = JOptionPane.showInputDialog("Ingrese defensa");
+            salud = JOptionPane.showInputDialog("Ingrese salud");
+            
             admiGuerrero ap = new admiGuerrero("./usuarios.txt");
-
-            String nombre = JOptionPane.showInputDialog("Ingrese nombre");
-            String nickName = JOptionPane.showInputDialog("Ingrese nickName");
-            String ataque = JOptionPane.showInputDialog("Ingrese nuevo poder de ataque");
-            String defensa = JOptionPane.showInputDialog("Ingrese defensa");
-            String salud = JOptionPane.showInputDialog("Ingrese salud");
-
             ap.cargarArchivo();
-            ap.getListaAlumnos().get(jTable1.getSelectedRow()+1).setNombre(nombre);
+            ap.getListaAlumnos().get(jTable1.getSelectedRow()).setNombre(nombre);
             ap.getListaAlumnos().get(jTable1.getSelectedRow()).setNickname(nickName);
             ap.getListaAlumnos().get(jTable1.getSelectedRow()).setPoder_ataque(Integer.parseInt(ataque));
             ap.getListaAlumnos().get(jTable1.getSelectedRow()).setPorder_defensa(Integer.parseInt(defensa));
@@ -546,9 +546,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        /*hilo_batalla h = new hilo_batalla(peleas);
-        Thread proceso1 = new Thread(h);
-        proceso1.start();*/
+        
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**
@@ -630,4 +628,5 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre;
     // End of variables declaration//GEN-END:variables
     ArrayList<hilo_batalla> peleas = new ArrayList();
+    hilo_batalla ab;
 }
