@@ -21,7 +21,8 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
-
+        String hola="";
+        
     }
 
     /**
@@ -520,14 +521,15 @@ public class principal extends javax.swing.JFrame {
 
     private void boton_modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_modificarMouseClicked
         if (jTable1.getSelectedRow() >= 0) {
-            String nombre,nickName,ataque,defensa,salud;
-             nombre = JOptionPane.showInputDialog("Ingrese nombre");
-             nickName = JOptionPane.showInputDialog("Ingrese nickName");
-             ataque = JOptionPane.showInputDialog("Ingrese nuevo poder de ataque");
+            String nombre, nickName, ataque, defensa, salud;
+            nombre = JOptionPane.showInputDialog("Ingrese nombre");
+            nickName = JOptionPane.showInputDialog("Ingrese nickName");
+            ataque = JOptionPane.showInputDialog("Ingrese nuevo poder de ataque");
             defensa = JOptionPane.showInputDialog("Ingrese defensa");
             salud = JOptionPane.showInputDialog("Ingrese salud");
-            
+
             admiGuerrero ap = new admiGuerrero("./usuarios.txt");
+
             ap.cargarArchivo();
             ap.getListaAlumnos().get(jTable1.getSelectedRow()).setNombre(nombre);
             ap.getListaAlumnos().get(jTable1.getSelectedRow()).setNickname(nickName);
@@ -628,5 +630,5 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre;
     // End of variables declaration//GEN-END:variables
     ArrayList<hilo_batalla> peleas = new ArrayList();
-    hilo_batalla ab;
+    hilo_batalla hb;
 }
